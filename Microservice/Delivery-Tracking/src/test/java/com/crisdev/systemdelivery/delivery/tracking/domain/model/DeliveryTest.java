@@ -19,7 +19,7 @@ class DeliveryTest {
         delivery.place();
 
         assertEquals(DeliveryStatus.WAITING_FOR_COURIER, delivery.getStatus());
-        assertNotNull(delivery.getPlaceAt());
+        assertNotNull(delivery.getPlacedAt());
     }
 
     @Test
@@ -30,7 +30,7 @@ class DeliveryTest {
         });
 
         assertEquals(DeliveryStatus.DRAFT, delivery.getStatus());
-        assertNull(delivery.getPlaceAt());
+        assertNull(delivery.getPlacedAt());
     }
 
     private Delivery.PreparationDetails createdValidPreparationDetails() {
